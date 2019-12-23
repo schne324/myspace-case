@@ -1,0 +1,62 @@
+{
+  "name": "myspace-case",
+  "version": "1.0.0",
+  "description": "mYsPaCe cAsE sTrInG",
+  "main": "index.js",
+  "author": "Harris Schneiderman",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "eslint .",
+    "precommit": "lint-staged",
+    "fmt": "prettier --write *.{js,md} **/*.{js,md}",
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{css,md,json,less}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+      "test": true,
+      "expect": true,
+      "beforeEach": true,
+      "afterEach": true,
+      "describe": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 60,
+    "bracketSpacing": true,
+    "useTabs": false,
+    "trailingComma": "none",
+    "arrowParens": "avoid"
+  }
+}
