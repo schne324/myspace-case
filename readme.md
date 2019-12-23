@@ -1,4 +1,4 @@
-# mYsPaCe cAsE
+# mYsPaCe cAsE [![CircleCI](https://circleci.com/gh/schne324/myspace-case.svg?style=svg)](https://circleci.com/gh/schne324/myspace-case)
 
 Convert strings to annoying myspace case strings
 
